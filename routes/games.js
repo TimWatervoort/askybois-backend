@@ -9,25 +9,25 @@ router.get('/', async (req, res, next) => {
   return mw.handleResponse(res, response);
 });
 
-//Get Game by id
+//Get game by id
 router.get('/:id', mw.checkIfExists('games'), async (req, res, next) => {
   const response = await gamesController.getOneGame(req.params.id);
   return mw.handleResponse(res, response);
 });
 
-// Create a new Game
+// Create a new game
 router.post('/', async (req, res, next) => {
   const response = await gamesController.postOneGame(req.body);
   return mw.handleResponse(res, response);
 });
 
-// Update a Game by id
+// Update a game by id
 router.patch('/:id', mw.checkIfExists('games'), async (req, res, next) => {
   const response = await gamesController.patchOneGame(req.params.id, req.body);
   return mw.handleResponse(res, response);
 });
 
-// Delete a Game by id
+// Delete a game by id
 router.delete('/:id', mw.checkIfExists('games'), async (req, res, next) => {
   const response = await gamesController.deleteOneGame(req.params.id);
   return mw.handleResponse(res, response);

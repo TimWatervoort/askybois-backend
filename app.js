@@ -6,6 +6,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const gamesRouter = require('./routes/games');
+const scoresRouter = require('./routes/scores');
 
 const environment = process.env.NODE_ENV || 'development'
 if (environment !== 'production') {
@@ -23,5 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/games', gamesRouter);
+app.use('/scores', scoresRouter);
 
 module.exports = app;
