@@ -12,7 +12,7 @@
     Create a database called `askybois_dev` with the `postgres` user having permissions.
 
     
-    If you do not have the knex cli installed, install it with 
+    If you do not have the Knex CLI installed, install it with 
 
     `npm install knex -g`
 

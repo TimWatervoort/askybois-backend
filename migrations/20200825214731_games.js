@@ -11,6 +11,7 @@ exports.up = function(knex) {
     table.string('bonus_round2').defaultTo('');
     table.string('bonus_round3').defaultTo('');
     table.integer('max_points').notNullable().defaultTo(0);
+    table.datetime('original_date', { useTz: false }).notNullable().defaultTo(new Date().toLocaleDateString());
   })
 };
 

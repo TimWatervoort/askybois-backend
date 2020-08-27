@@ -14,7 +14,8 @@ exports.seed = function(knex) {
           bonus_round1: 'alphabois',
           bonus_round2: 'lookybois',
           bonus_round3: 'auditobois',
-          max_points: 75
+          max_points: 75,
+          original_date: '2020-06-03'
         },
         {
           id: 2, 
@@ -26,7 +27,8 @@ exports.seed = function(knex) {
           bonus_round1: 'torturebois',
           bonus_round2: 'blankibois',
           bonus_round3: 'auditobois',
-          max_points: 78
+          max_points: 78,
+          original_date: '2020-08-10'
         },
         {
           id: 3, 
@@ -38,7 +40,8 @@ exports.seed = function(knex) {
           bonus_round1: 'choosybois',
           bonus_round2: 'truthybois',
           bonus_round3: 'alphabois',
-          max_points: 75
+          max_points: 75,
+          original_date: '2020-08-17'
         }
       ])
       .then(function() {

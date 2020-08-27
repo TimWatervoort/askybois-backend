@@ -15,16 +15,19 @@ router.get('/:id', mw.checkIfExists('users'), async (req, res, next) => {
   return mw.handleResponse(res, response);
 });
 
+// Create a new user
 router.post('/', mw.checkIfTaken('users', 'username'), async (req, res, next) => {
   const response = await usersController.postOneUser(req.body);
   return mw.handleResponse(res, response);
 });
 
+// Update a user by id
 router.patch('/:id', mw.checkIfExists('users'), async (req, res, next) => {
   const response = await usersController.patchOneUser(req.params.id, req.body);
   return mw.handleResponse(res, response);
 });
 
+// Delete a user by id
 router.delete('/:id', mw.checkIfExists('users'), async (req, res, next) => {
   const response = await usersController.deleteOneUser(req.params.id);
   return mw.handleResponse(res, response);
